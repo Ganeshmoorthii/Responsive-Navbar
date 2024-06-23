@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Open Sans';
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 5%;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-left: 0.7rem;
+    color: #12022f;
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: #ffdda9;
+    padding: 5px;
+    margin-left: 0.7rem;
+    border-width: 0px;
+    height: 40px;
+    width: 80px;
+}
+
+.main-container {
+    background-image: url('https://assets.ccbp.in/frontend/intermediate-rwd/landing-page-sm-bg.png');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        background-image: url('https://assets.ccbp.in/frontend/intermediate-rwd/landing-page-lg-bg.png');
+    }
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Roboto';
+}
+
+.bx-menu {
+    cursor: pointer;
+    display: none;
+}
+
+@media all and (max-width: 576px) {
+    .bx-menu {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+}
+
+/* Add this class */
+.navbar-visible {
+    display: flex;
+}
